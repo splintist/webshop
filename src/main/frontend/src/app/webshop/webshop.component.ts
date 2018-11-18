@@ -13,6 +13,7 @@ export class WebshopComponent implements OnInit {
 
     fullOrdersUrl;
     fullProductsUrl;
+    fullApiDocsUrl;
 
     private collapsed = true;
     orderFinished = false;
@@ -42,6 +43,7 @@ export class WebshopComponent implements OnInit {
     constructor(private webshopService: WebshopService) {
         this.fullOrdersUrl = webshopService.fullOrdersUrl;
         this.fullProductsUrl = webshopService.fullProductsUrl;
+        this.fullApiDocsUrl = webshopService.fullApiDocsUrl;
     }
 
     ngOnInit() {

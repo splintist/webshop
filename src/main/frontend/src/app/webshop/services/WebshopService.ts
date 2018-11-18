@@ -10,9 +10,11 @@ export class WebshopService {
 
     private _productsUrl = environment.proxy + "/api/products";
     private _ordersUrl = environment.proxy + "/api/orders";
+    private _apiDocsUrl = environment.proxy + "/swagger-ui.html";
 
     private _fullProductsUrl = "<a class=\"nav-link\" href=\"" + this._productsUrl + "\">API Products</a>";
     private _fullOrdersUrl = "<a class=\"nav-link\" href=\"" + this._ordersUrl + "\">API Orders</a>";
+    private _fullApiDocsUrl = "<a class=\"nav-link\" href=\"" + this._apiDocsUrl + "\">API Docs</a>";
 
     private productOrder: ProductOrder;
     private orders: ProductOrders = new ProductOrders();
@@ -61,6 +63,9 @@ export class WebshopService {
     }
     get fullProductsUrl(): string {
         return this._fullProductsUrl;
+    }
+    get fullApiDocsUrl(): string {
+        return this._fullApiDocsUrl;
     }
 
     /**
