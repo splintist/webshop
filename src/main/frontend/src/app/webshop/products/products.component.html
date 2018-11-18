@@ -1,0 +1,50 @@
+<div class="row ">
+    <div class="col-lg-12 col-md-12 mb-12 padding-cards" *ngFor="let order of productOrders">
+        <div class="row card-group col-lg-12 col-xs-12 col-md-12 col-sm-12">
+            <div class="card col-lg-6 col-xs-6 col-md-6 col-sm-6">
+                <a href="#"><img class="card-img-top" src={{order.product.pictureUrl}} alt=""></a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{order.product.price}}€</h5>
+                    <div class="row">
+                        <div class="col-4 padding-0" *ngIf="!isProductSelected(order.product)">
+                            <input type="number" min="0" class="form-control" [(ngModel)]=order.quantity>
+                        </div>
+                        <div class="col-4 padding-0" *ngIf="!isProductSelected(order.product)">
+                            <button class="btn btn-primary" (click)="addToCart(order)"
+                                    [disabled]="order.quantity <= 0">Hinzufügen
+                            </button>
+                        </div>
+                        <div class="col-12" *ngIf="isProductSelected(order.product)">
+                            <button class="btn btn-primary btn-block"
+                                    (click)="removeFromCart(order)">Entfernen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Beschreibung</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bewertung</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Fragen</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>{{order.product.name}}</h4>
+                    </div>
+                    <div class="card-body text-lg-left">
+                        {{order.product.description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

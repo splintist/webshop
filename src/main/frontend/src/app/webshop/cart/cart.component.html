@@ -1,0 +1,18 @@
+<div class="card text-white bg-warning mb-3 fixed" style="max-width: 18rem;">
+    <div class="card-header text-center">Einkaufswagen</div>
+    <div class="card-body">
+        <h5 class="card-title">Summe: {{total}}€</h5>
+        <hr>
+        <h6 class="card-title">Im Einkaufswagen:</h6>
+
+        <ul>
+            <li *ngFor="let order of orders.productOrders">
+                {{ order.product.name }} - {{ order.quantity}} Stück.
+            </li>
+        </ul>
+
+        <button class="btn btn-light btn-block" (click)="finishOrder()"
+                [disabled]="orders.productOrders.length == 0">Abschließen
+        </button>
+    </div>
+</div>
