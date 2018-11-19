@@ -1,7 +1,7 @@
-#Introduction#
+# Introduction #
 The Project is split into 2 essential parts. The Frontend and the Backend.
 
-#Prerequesites to run the full project on your local machine#
+# Prerequesites to run the full project on your local machine #
 In order to run this project you need a couple of things:
 - Java JDK
 - Maven
