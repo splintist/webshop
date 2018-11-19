@@ -1,6 +1,9 @@
 # Introduction #
 The Project is split into 2 essential parts. The Frontend and the Backend.
 
+# Click here to see the project in action #
+http://projekt03-env-frontend.pyy6ipv83s.us-east-2.elasticbeanstalk.com/#
+
 # Prerequesites to run the full project on your local machine #
 In order to run this project you need a couple of things:
 - Java JDK
